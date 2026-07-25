@@ -25,6 +25,4 @@ class Tipografia{
     letterSpacing: 12 * -0.01,
     color: Colors.lightBlue,
   );
-
-
 }

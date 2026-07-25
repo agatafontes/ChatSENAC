@@ -24,9 +24,9 @@ class Login extends StatelessWidget {
           children: [
             FlutterLogo(size: 18),
             Text("ChatSENAC"),
-
           ],
         ),
+        SizedBox(height: 32,),
 
         //Titulos
         Text(
