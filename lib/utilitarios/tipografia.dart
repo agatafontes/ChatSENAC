@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Tipografia{
   static TextStyle h1 = TextStyle(
-      fontSize: 32,
+      fontSize: 22,
       fontWeight: FontWeight.bold,
       fontFamily: "Inter",
       height: 1.3,
@@ -24,5 +24,9 @@ class Tipografia{
     height: 1.4,
     letterSpacing: 12 * -0.01,
     color: Colors.lightBlue,
+  );
+
+  static TextStyle logo = TextStyle(
+
   );
 }
