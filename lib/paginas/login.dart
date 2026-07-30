@@ -35,17 +35,19 @@ class Login extends StatelessWidget {
 
         // Campos
         Text("Email", style: Tipografia.subtitulo),
-        TextField(decoration: InputDecoration(border: OutlineInputBorder())),
+        TextField(decoration: InputDecoration(
+            border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),))),
         SizedBox(height: 20),
         Text("Senha", style: Tipografia.subtitulo),
         TextField(
-            obscureText: true,
-            decoration: InputDecoration(
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                ),
-              suffixIcon: Icon(Icons.visibility_off),
+          obscureText: true,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
             ),
+            suffixIcon: Icon(Icons.visibility_off),
+          ),
         ),
         SizedBox(height: 20),
         InkWell(
