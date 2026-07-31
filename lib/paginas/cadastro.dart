@@ -1,89 +1,93 @@
 import 'package:flutter/material.dart';
-import 'package:primeiro_app/utilitarios/tipografia.dart';
+
+import '../utilitarios/tipografia.dart';
 
 class Cadastro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(top: 48),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          //Setinha
-          Align(
-            alignment: Alignment.centerLeft,
-            child: GestureDetector(
-              child: Icon(Icons.arrow_back),),
-          ),
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: Icon(Icons.arrow_back),
+                  ),
+                ),
+                SizedBox(height: 32),
 
+                // Titulos
+                Text("Cadastre-se", style: Tipografia.h1),
+                SizedBox(height: 12),
+                Text("Crie uma conta e continue!", style: Tipografia.subtitulo),
+                SizedBox(height: 32),
 
-          //Titulos
-          Text(
-            "Cadastrar-se",
-            style: Tipografia.h1,
-            textAlign: TextAlign.center,
-          ),
-          Text(
-            "Crie uma conta para continuar!",
-            textAlign: TextAlign.center,
-          ),
-          SizedBox(height: 50),
+                // Campos
+                Text("Nome Completo", style: Tipografia.subtitulo),
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 16),
+                Text("Email", style: Tipografia.subtitulo),
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 16),
+                Text("Senha", style: Tipografia.subtitulo),
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    suffixIcon: Icon(Icons.visibility_off),
+                  ),
+                  obscureText: true,
+                ),
+                SizedBox(height: 16),
+                Text("Confirmar Senha", style: Tipografia.subtitulo),
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    suffixIcon: Icon(Icons.visibility_off),
+                  ),
+                  obscureText: true,
+                ),
 
-          // Campos
-          Text("Nome", style: Tipografia.subtitulo),
-          TextField(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                // Botões
+                SizedBox(height: 24),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    padding: EdgeInsets.symmetric(vertical: 16),
+                  ),
+                  child: Text("Cadastrar", style: Tipografia.subtitulo),
+                ),
+              ],
             ),
           ),
-          SizedBox(height: 10),
-
-          Text("Email", style: Tipografia.subtitulo),
-          TextField(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-            ),
-          ),
-          SizedBox(height: 20),
-
-          Text("Senha", style: Tipografia.subtitulo),
-          TextField(
-            obscureText: true,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-              suffixIcon: Icon(Icons.visibility_off),
-            ),
-          ),
-          SizedBox(height: 20),
-
-          Text("Confirmar Senha", style: Tipografia.subtitulo),
-          TextField(
-            obscureText: true,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-              suffixIcon: Icon(Icons.visibility_off),
-            ),
-          ),
-          SizedBox(height: 20),
-
-          //Botões
-          ElevatedButton(
-            onPressed: () {},
-
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.blueAccent,
-              // Cor de fundo
-              foregroundColor: Colors.white,
-              // Cor do texto e do ícone
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
-              padding: EdgeInsets.symmetric(vertical: 16),
-              elevation: 0,
-            ),
-            child: Text("Cadastrar"),
-          ),
-        ],
+        ),
       ),
     );
   }
