@@ -17,7 +17,9 @@ class Cadastro extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
                     child: Icon(Icons.arrow_back),
                   ),
                 ),
